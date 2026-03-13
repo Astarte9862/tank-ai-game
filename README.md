@@ -1,16 +1,23 @@
 # Tank AI Game
 
-A prototype game where players program tank AI using a node editor.
+A prototype tank battle game where players program tank AI using a node editor.
 
 Inspired by Carnage Heart and Gladiabots.
+
+## Overview
+
+This project explores a programmable AI system for a tank battle game.
+
+Players design tank behaviors using a custom node editor.
+The AI graph is saved as JSON and executed during battle.
 
 ## Features
 
 - Node-based AI programming system
 - Custom node editor built with Unity UI Toolkit
 - AI behaviors saved as JSON
-- Separate AI for player and enemy tanks
-- /*5 vs 5 tank battles*/
+- Separate AI programs for player and enemy tanks
+- Planned: 5 vs 5 tank battles
 
 ## AI System
 
@@ -25,16 +32,4 @@ Players create tank behaviors using nodes such as:
 
 The node graph is saved as JSON and executed at runtime.
 
-## Status
-
-🚧 Early Development
-
-## Screenshot
-
-### Node Editor
-
-![Node Editor](docs/node_editor.png)
-
-### Battle
-
-![Battle](docs/battle.png)
+Example logic:
