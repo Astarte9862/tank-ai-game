@@ -1,0 +1,9 @@
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements">
+
+    <Style src="nodeEditor.uss"/>
+
+    <ui:VisualElement name="graph-root"
+        style="flex-grow:1;" />
+
+</ui:UXML>
