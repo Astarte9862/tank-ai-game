@@ -33,3 +33,40 @@ Players create tank behaviors using nodes such as:
 The node graph is saved as JSON and executed at runtime.
 
 Example logic:
+IfEnemyAhead
+→ IfTurretAimed
+→ Fire
+
+Else
+→ IfWallAhead
+→ TurnLeft
+
+Else
+→ MoveForward
+
+## Screenshots
+
+### Node Editor
+
+![Node Editor](docs/node_editor.png)
+
+### Battle
+
+![Battle](docs/battle.png)
+
+## Tech Stack
+
+- Unity
+- C#
+- Unity UI Toolkit
+- JSON serialization
+
+## Status
+
+🚧 Early Development
+
+## Asset Credits
+
+Tank sprites from  
+WW2 Pixel Top-View Tanks by JimHatama  
+https://jimhatama.itch.io/ww2-pixel-top-view-tanks
