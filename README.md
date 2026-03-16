@@ -32,17 +32,21 @@ Players create tank behaviors using nodes such as:
 
 The node graph is saved as JSON and executed at runtime.
 
-Example logic:
+Example logic
+
 IfEnemyAhead
-→ IfTurretAimed
-→ Fire
-
+ └ IfTurretAimed → Fire
 Else
-→ IfWallAhead
-→ TurnLeft
-
+ └ IfWallAhead → TurnLeft
 Else
-→ MoveForward
+ └ MoveForward
+
+## Execution Model
+
+The AI executes nodes sequentially starting from the Start node.
+If the next node is null, execution returns to the Start node,
+creating a continuous behavior loop. A step limit per frame
+prevents runaway execution.
 
 ## Screenshots
 
