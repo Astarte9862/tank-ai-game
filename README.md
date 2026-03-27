@@ -1,76 +1,82 @@
 # Tank AI Game
 
-A prototype tank battle game where players program tank AI using a node editor.
+ノードベースで戦車のAIを構築できるゲームのプロトタイプです。
+Carnage Heart や Gladiabots に着想を得て開発しています。
 
-Inspired by Carnage Heart and Gladiabots.
+---
 
-## Overview
+## 概要
 
-This project explores a programmable AI system for a tank battle game.
+本プロジェクトでは、プレイヤーがノードを組み合わせることで
+戦車の行動ロジック（AI）を視覚的に構築できるシステムを実装しています。
 
-Players design tank behaviors using a custom node editor.
-The AI graph is saved as JSON and executed during battle.
+Unity（C#）とUI Toolkitを用いて、
+独自のノードエディタおよびAI実行システムを開発しました。
 
-## Features
+---
 
-- Node-based AI programming system
-- Custom node editor built with Unity UI Toolkit
-- AI behaviors saved as JSON
-- Separate AI programs for player and enemy tanks
-- Planned: 5 vs 5 tank battles
+## 主な機能
 
-## AI System
+* ノードベースAI構築システム
+* UI Toolkitによるカスタムノードエディタ
+* ノードの接続・編集・削除機能
+* AIロジックのJSON保存／読み込み
+* プレイヤーAIと敵AIの分離設計
 
-Players create tank behaviors using nodes such as:
+---
 
-- IfEnemyAhead
-- IfTurretAimed
-- IfWallAhead
-- MoveForward
-- TurnLeft / TurnRight
-- Fire
+## AIシステム
 
-The node graph is saved as JSON and executed at runtime.
+以下のようなノードを組み合わせて行動を制御します。
 
-Example logic
+* IfEnemyAhead
+* IfTurretAimed
+* IfWallAhead
+* MoveForward
+* TurnLeft / TurnRight
+* Fire
 
-IfEnemyAhead
- └ IfTurretAimed → Fire
-Else
- └ IfWallAhead → TurnLeft
-Else
- └ MoveForward
+ノードグラフはJSONとして保存され、
+ランタイムで逐次実行されます。
 
-## Execution Model
+---
 
-The AI executes nodes sequentially starting from the Start node.
-If the next node is null, execution returns to the Start node,
-creating a continuous behavior loop. A step limit per frame
-prevents runaway execution.
+## 工夫した点
 
-## Screenshots
+* ノードエディタをUI Toolkitで一から実装
+* パン・ズーム対応のグラフ操作
+* ノード接続の制約（1入力1出力）設計
+* 実行中ノードの可視化（デバッグ機能）
+* フレームごとの実行ステップ制御
 
-### Node Editor
+---
 
-![Node Editor](docs/node_editor.png)
+## 技術スタック
 
-### Battle
+* Unity
+* C#
+* UI Toolkit
+* JSON
 
-![Battle](docs/battle.png)
+---
 
-## Tech Stack
+## 今後の予定
 
-- Unity
-- C#
-- Unity UI Toolkit
-- JSON serialization
+* 5vs5の戦車バトル対応
+* ノードの種類追加
+* AIの高度化
+* 視覚的なデバッグ機能の強化
 
-## Status
+---
 
-🚧 Early Development
+## ステータス
 
-## Asset Credits
+🚧 開発中（プロトタイプ段階）
 
-Tank sprites from  
-WW2 Pixel Top-View Tanks by JimHatama  
+---
+
+## クレジット
+
+戦車画像素材：
+WW2 Pixel Top View Tanks by jimhatama
 https://jimhatama.itch.io/ww2-pixel-top-view-tanks
